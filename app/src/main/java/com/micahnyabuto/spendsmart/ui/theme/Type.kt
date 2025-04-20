@@ -7,7 +7,8 @@ import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
 
 val productSan = FontFamily(
-    Font(R.font.product_san_regular,)
+
+
 )
 
 
