@@ -62,6 +62,8 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    //App compat
+    implementation(libs.androidx.appcompat)
 
     //Room
     implementation("androidx.room:room-runtime:2.7.0")
