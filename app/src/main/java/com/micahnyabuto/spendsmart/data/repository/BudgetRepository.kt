@@ -29,7 +29,7 @@ class BudgetRepositoryImpl(
 
     override suspend fun addBudget(budget: BudgetEntity) {
         budgetDao.insertBudget(budget)
-    }
+   }
 
     override fun getBudget(): Flow<BudgetEntity?> {
         return budgetDao.getTotalBudget()
