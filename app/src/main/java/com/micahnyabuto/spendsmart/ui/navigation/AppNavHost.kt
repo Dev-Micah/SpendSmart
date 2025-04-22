@@ -5,6 +5,7 @@ import androidx.compose.ui.Modifier
 import androidx.navigation.NavHostController
 import androidx.navigation.compose.NavHost
 import androidx.navigation.compose.composable
+import com.micahnyabuto.spendsmart.ui.Screens.addbudget.AddBudgetItemScreen
 import com.micahnyabuto.spendsmart.ui.Screens.home.HomeScreen
 import com.micahnyabuto.spendsmart.ui.Screens.profile.ProfileScreen
 import com.micahnyabuto.spendsmart.ui.Screens.reports.ReportsScreen
@@ -40,6 +41,11 @@ fun AppNavHost(
         composable<Destinations.Settings> {
             SettingsScreen(
                 navController = navController
+            )
+        }
+        composable <Destinations.AddBudgetItem>{
+            AddBudgetItemScreen(
+                navController =navController
             )
         }
     }
