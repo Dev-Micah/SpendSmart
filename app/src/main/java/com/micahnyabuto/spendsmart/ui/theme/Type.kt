@@ -1,13 +1,18 @@
 package com.micahnyabuto.spendsmart.ui.theme
 
-import androidx.compose.material3.R
 import androidx.compose.material3.Typography
 import androidx.compose.ui.text.font.Font
 import androidx.compose.ui.text.font.FontFamily
 import androidx.compose.ui.text.font.FontWeight
+import com.micahnyabuto.spendsmart.R
 
 val productSan = FontFamily(
-
+    Font(R.font.product_sans_light, FontWeight.Light),
+    Font(R.font.product_sans_regular, FontWeight.Normal),
+    Font(R.font.product_sans_medium, FontWeight.Medium),
+    Font(R.font.product_sans_thin, FontWeight.Thin),
+    Font(R.font.product_sans_bold, FontWeight.Bold),
+    Font(R.font.product_sans_black, FontWeight.Black)
 
 )
 
