@@ -1,5 +1,7 @@
 [versions]
 agp = "8.9.1"
+hiltAndroidCompiler = "2.55"
+hiltNavigationCompose = "1.1.0"
 kotlin = "2.1.20"
 ksp = "2.1.20-2.0.0"
 coreKtx = "1.16.0"
@@ -9,16 +11,18 @@ espressoCore = "3.6.1"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.1"
 composeBom = "2025.04.00"
-compose-navigation = "2.8.4"
-kotlinx-serialization-json = "1.7.3"
+compose-navigation = "2.8.9"
+kotlinx-serialization-json = "1.8.1"
 appcompat = "1.7.0"
-room = "2.6.1"
-hiltAndroid = "2.51.1"
+room = "2.7.0"
+hiltAndroid = "2.56.1"
 hiltCompiler = "1.2.0"
 
 
 [libraries]
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
+androidx-hilt-navigation-compose-v110 = { module = "androidx.hilt:hilt-navigation-compose", version.ref = "hiltNavigationCompose" }
+hilt-android-compiler-v255 = { module = "com.google.dagger:hilt-android-compiler", version.ref = "hiltAndroidCompiler" }
 junit = { group = "junit", name = "junit", version.ref = "junit" }
 androidx-junit = { group = "androidx.test.ext", name = "junit", version.ref = "junitVersion" }
 androidx-espresso-core = { group = "androidx.test.espresso", name = "espresso-core", version.ref = "espressoCore" }

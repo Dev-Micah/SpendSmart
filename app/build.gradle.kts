@@ -1,4 +1,4 @@
-import com.android.tools.r8.internal.iM
+
 
 plugins {
     alias(libs.plugins.android.application)
@@ -6,7 +6,11 @@ plugins {
     alias(libs.plugins.kotlin.compose)
     id("com.google.devtools.ksp")
     id("com.google.dagger.hilt.android")
-    kotlin("plugin.serialization")
+
+    id("org.jetbrains.kotlin.plugin.serialization") version "2.1.20" // Kotlin serialization
+
+
+
 }
 
 
@@ -62,6 +66,10 @@ dependencies {
     androidTestImplementation(libs.androidx.ui.test.junit4)
     debugImplementation(libs.androidx.ui.tooling)
     debugImplementation(libs.androidx.ui.test.manifest)
+    //Navigation
+    implementation("androidx.navigation:navigation-compose:2.8.4")
+
+
     //App compat
     implementation(libs.androidx.appcompat)
 
@@ -71,10 +79,20 @@ dependencies {
     ksp("androidx.room:room-compiler:2.7.0")
 
     //Hilt
-    ksp("com.google.dagger:hilt-android-compiler:2.55")
-    implementation("com.google.dagger:hilt-android:2.56.1")
-    implementation("androidx.hilt:hilt-navigation-compose:1.0.0")
+    ksp(libs.hilt.android.compiler)
+    ksp(libs.androidx.hilt.compiler)
+    implementation(libs.hilt.android)
+    implementation(libs.androidx.hilt.navigation.compose)
+
+
+   implementation("org.jetbrains.kotlinx:kotlinx-coroutines-android:1.10.2")
+   implementation("androidx.lifecycle:lifecycle-viewmodel-ktx:2.8.7")
+   implementation("androidx.lifecycle:lifecycle-runtime-ktx:2.8.7")
+
+    // JSON serialization library, works with the Kotlin serialization plugin
     implementation("org.jetbrains.kotlinx:kotlinx-serialization-json:1.7.3")
+
+
 
 
 }
