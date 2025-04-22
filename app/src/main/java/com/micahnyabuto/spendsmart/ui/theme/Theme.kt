@@ -61,7 +61,7 @@ fun SpendSmartTheme(
 
     val autoColors = if (isSystemInDarkTheme()) DarkColorScheme else LightColorScheme
 
-    // Dynamic color is available on Android 12+
+    // available on Android 12+
     val dynamicColors = if (supportsDynamicTheming() && dynamicColor) {
         if (isSystemInDarkTheme()) {
             dynamicDarkColorScheme(context)
