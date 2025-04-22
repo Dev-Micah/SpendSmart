@@ -15,6 +15,9 @@ sealed class Destinations {
     @Serializable
     object Profile
 
+    @Serializable
+    object Reports
+
 
     @Serializable
     data class BudgetAdded(
