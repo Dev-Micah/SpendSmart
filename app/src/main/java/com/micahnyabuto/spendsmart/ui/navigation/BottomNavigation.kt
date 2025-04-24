@@ -15,6 +15,19 @@ enum class BottomNavigation(
         unselectedIcon = R.drawable.ic_home,
         route = Destinations.Home
     ),
+       Reports(
+        label = "Reports",
+        selectedIcon = R.drawable.ic_reports,
+        unselectedIcon = R.drawable.ic_reports,
+        route = Destinations.Home
+    ),
+       Profile(
+        label = "Profile",
+        selectedIcon = R.drawable.ic_account,
+        unselectedIcon = R.drawable.ic_account,
+        route = Destinations.Home
+    ),
+
 
     Settings(
         label = "Settings",
