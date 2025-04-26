@@ -631,7 +631,7 @@ fun SetMonthlyExpenseDialog(
                     onClick = onSetMonthlyExpense,
                 ) {
                     Text(
-                        text = "",
+                        text = "Set Budget" ,
                         style = MaterialTheme.typography.bodySmall,
                     )
                 }

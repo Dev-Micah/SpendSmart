@@ -8,6 +8,7 @@ import androidx.compose.foundation.layout.Spacer
 import androidx.compose.foundation.layout.fillMaxSize
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material3.MaterialTheme
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
 import androidx.compose.ui.Alignment
@@ -43,9 +44,11 @@ fun ReportsScreen(
         )
         Spacer(Modifier.size(8.dp))
         Text("Your reports will be here for downloading",
-            style = )
+            style = MaterialTheme.typography.bodyMedium )
         Spacer(Modifier.size(8.dp))
-        Text("Currently you have no reports ")
+        Text("Currently you have no reports ",
+            style = MaterialTheme.typography.bodyMedium
+            )
     }
 
 }

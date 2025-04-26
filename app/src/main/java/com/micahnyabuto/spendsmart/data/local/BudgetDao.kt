@@ -15,6 +15,6 @@ interface BudgetDao {
     suspend fun updateSpentAmount(amount :Double)
 
     @Query("SELECT * FROM budgets")
-    fun getTotalBudget(): Flow<BudgetEntity>
+    fun getTotalBudget(): Flow<BudgetEntity?>
 
 }
