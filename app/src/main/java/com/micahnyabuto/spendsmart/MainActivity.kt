@@ -21,7 +21,10 @@ import androidx.compose.foundation.layout.only
 import androidx.compose.foundation.layout.padding
 import androidx.compose.foundation.layout.size
 import androidx.compose.foundation.shape.RoundedCornerShape
+import androidx.compose.material.icons.Icons
+import androidx.compose.material.icons.filled.Add
 import androidx.compose.material3.FabPosition
+import androidx.compose.material3.FloatingActionButton
 import androidx.compose.material3.HorizontalDivider
 import androidx.compose.material3.Icon
 import androidx.compose.material3.MaterialTheme
@@ -47,7 +50,9 @@ import com.micahnyabuto.spendsmart.ui.navigation.AppNavHost
 import com.micahnyabuto.spendsmart.ui.navigation.BottomNavigation
 import com.micahnyabuto.spendsmart.ui.navigation.Destinations
 import com.micahnyabuto.spendsmart.ui.theme.SpendSmartTheme
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class MainActivity : ComponentActivity() {
     @SuppressLint("UnrememberedMutableInteractionSource", "RememberReturnType",
         "UnusedMaterial3ScaffoldPaddingParameter"
@@ -68,17 +73,20 @@ class MainActivity : ComponentActivity() {
                     floatingActionButtonPosition = FabPosition.Center,
                     contentWindowInsets = WindowInsets.navigationBars.only(WindowInsetsSides.Horizontal),
                     floatingActionButton = {
-                        Image(
+                        FloatingActionButton(
                             modifier = Modifier
-                                .offset(y = 80.dp)
-                                .size(56.dp)
-                                .clip(RoundedCornerShape(50))
-                                .clickable(MutableInteractionSource(), null) {
-                                    navController.navigate(Destinations.AddBudgetItem)
-                                },
-                            painter = painterResource(id = R.drawable.add_btn),
-                            contentDescription = "Add Budget item"
-                        )
+                                .offset(y =72.dp)
+                                .size(45.dp),
+                            onClick = {navController.navigate(Destinations.AddBudgetItem)},
+                            shape = RoundedCornerShape(60.dp),
+                            containerColor = MaterialTheme.colorScheme.primary
+
+                            ) {
+                            Icon(
+                                imageVector = Icons.Default.Add,
+                                contentDescription = "Add budget item")
+                        }
+
                     },
                     bottomBar = {
                         if (showBottomNavigation) {
@@ -144,6 +152,8 @@ class MainActivity : ComponentActivity() {
 
                 {
                 AppNavHost(
+                    modifier = Modifier
+                        .fillMaxSize(),
                     navController = navController
                 )
 
