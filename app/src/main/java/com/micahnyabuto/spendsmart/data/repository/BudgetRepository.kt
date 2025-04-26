@@ -37,7 +37,9 @@ class BudgetRepositoryImpl(
 
     override fun getRemainingBudget(): Flow<Double> {
         return budgetDao.getTotalBudget().map{
-            it.allocatedAmount - it.spentAmount
+            val allocatedAmount = it?.allocatedAmount ?: 0.0
+            val spentAmount = it?.spentAmount ?: 0.0
+             allocatedAmount - spentAmount
         }
     }
 }
