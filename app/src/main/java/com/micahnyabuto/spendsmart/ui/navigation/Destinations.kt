@@ -21,6 +21,7 @@ sealed class Destinations {
 
     @Serializable
     data class BudgetAdded(
+
         val budgetItemName: String,
         val amount: String,
         val date : String
