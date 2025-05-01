@@ -272,7 +272,7 @@ fun HomeScreenContent(
                                         imageVector = Icons.Default.ArrowDropDown,
                                         contentDescription = "Dropdown",
                                         modifier = Modifier
-                                            .clickable{Toast.makeText(context, "This feature is coming soon Stay tuned for more updates",
+                                            .clickable{Toast.makeText(context, "This feature is currently unavailable",
                                                 Toast.LENGTH_SHORT).show()},
                                         tint = MaterialTheme.colorScheme.onSurface.copy(
                                             alpha = 0.6f,
