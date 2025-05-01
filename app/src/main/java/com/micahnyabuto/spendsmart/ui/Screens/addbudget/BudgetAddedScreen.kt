@@ -83,6 +83,7 @@ fun BudgetAddedScreenContent(
             ) {
                 Button(
                     modifier = Modifier
+                        .padding(bottom = 40.dp)
                         .height(48.dp)
                         .fillMaxWidth(),
                     shape = MaterialTheme.shapes.small,
@@ -122,13 +123,13 @@ fun BudgetAddedScreenContent(
                     horizontalAlignment = Alignment.CenterHorizontally,
                 ) {
                     Text(
-                        text = "Budget Item Added",
+                        text = "Expense Added ",
                         style = MaterialTheme.typography.titleLarge.copy(
                             color = MaterialTheme.colorScheme.secondary,
                         ),
                     )
                     Text(
-                        text = "Budget item has been added successfully,",
+                        text = "Expense item has been added successfully,",
                         style = MaterialTheme.typography.bodySmall.copy(
                             color = MaterialTheme.colorScheme.onSurface.copy(
                                 alpha = 0.5f
